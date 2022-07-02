@@ -1,0 +1,13 @@
+.bbl {
+    width: 120px;
+  }
+
+h1 {
+    margin-top: 2px;
+  }
+
+.flo,.mtok{
+  width:200px;
+  height: auto;
+  margin: 30px;
+}
