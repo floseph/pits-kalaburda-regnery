@@ -34,3 +34,18 @@ h1 {
 .big-button {
   font-size: 34px;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+
+.oder {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.register-link{
+  font-size: xx-large
+}
