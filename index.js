@@ -14,6 +14,7 @@ app.use('/img', express.static(__dirname + 'public/img'))
 
 // ROUTES
 const rootRoutes = require('./routes/rootRoutes')
+const registerRoutes = require('./routes/registerRoutes')
 const impressumRoutes = require('./routes/impressumRoutes')
 const aboutRoutes = require('./routes/aboutRoutes')
 const versandinfoRoutes = require('./routes/versandinfoRoutes')
@@ -27,6 +28,7 @@ const helpRoutes = require('./routes/helpRoutes')
 
 // USING ROUTES
 app.use('/', rootRoutes)
+app.use('/register', registerRoutes)
 app.use('/impressum', impressumRoutes)
 app.use('/about', aboutRoutes)
 app.use('/versandinfo', versandinfoRoutes)
