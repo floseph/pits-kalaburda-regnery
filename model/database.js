@@ -14,6 +14,7 @@ const db = new sqlite3.Database('./data.db', sqlite3.OPEN_READWRITE, (err) => {
 //   'DROP TABLE users'
 // );
 
+
 function addUser(firstName, lastName, email, password){
   const sql = 'INSERT INTO users(first_name, last_name, email, password) VALUES (?,?,?,?)';
 
@@ -41,15 +42,15 @@ async function findUserByEmail(email){
   })
 }
 
-const sql = `SELECT * FROM users`
+// const sql = `SELECT * FROM users`
 
-db.all(sql, [], (err, rows) => {
-  if (err) return console.error(err);
+// db.all(sql, [], (err, rows) => {
+//   if (err) return console.error(err);
 
-  rows.forEach( (row) => {
-    console.log(row);
-  })
-})
+//   rows.forEach( (row) => {
+//     console.log(row);
+//   })
+// })
 
 module.exports = {
   addUser,

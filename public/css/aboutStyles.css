@@ -12,6 +12,15 @@ h1 {
 
 .flo,.mtok{
   width:200px;
-  height: auto;
+  height: 400px;
+  /* height: auto;  */
   margin: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+.flo-box {
+  padding-right: 50px;
 }
