@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/register.css">
+  <title>Register</title>
+</head>
+<body>
+  <img src="/img/Batteribrueder.svg" alt="bb-logo" class="bbl">
+  <h1>Battery Brothers</h1>
+  <p>Dies ist der Batterien Shop von den Battery Brothers.</p>
+  <p>Wir stellen seit 2022 die tollsten Batterien her und das in 3 Varianten.</p>
+  <h2>Registrieren</h2>
+  <a href="/"><button>Zurück zur Startseite</button></a>
+  <form action="/register" method="POST">
+    <div>
+      <select name="customer-type" id="customer-type">
+        <optgroup label="Customer Type">
+          <option value="private">Privatkunde</option>
+          <option value="business">Geschäftskunde</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div>
+      <label for="firstName">Vorname</label>
+      <input type="text" id="firstName" name="firstName" required>
+    </div>
+
+    <div>
+      <label for="lastName">Nachname</label>
+      <input type="text" id="lastName" name="lastName" required>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div>
+      <label for="password">Passwort</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div>
+      <button type="submit">Registrieren</button>
+    </div>
+  </form>
+</body>
+</html>
