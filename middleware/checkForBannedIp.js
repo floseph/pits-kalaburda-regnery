@@ -3,7 +3,7 @@ const fs = require('fs')
 function checkForBannedIps(req, res, next){
   
   const ip = req.ip
-  const bannedIps = JSON.parse(fs.readFileSync('./json/bannedIps.json'))
+  const bannedIps = JSON.parse(fs.readFileSync(`${__dirname}/../json/bannedIps.json`))
 
   if(bannedIps.includes(ip)){
     res.status(403)

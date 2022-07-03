@@ -3,7 +3,7 @@ const fs = require('fs')
 function checkMaliciousUserAgent(req, res, next){
   
   const userAgent = req.get('User-Agent')
-  const bannedUserAgents = JSON.parse(fs.readFileSync('./json/bannedUserAgents.json'))
+  const bannedUserAgents = JSON.parse(fs.readFileSync(`${__dirname}/../json/bannedUserAgents.json`))
 
   if(bannedUserAgents.includes(userAgent)){
     res.status(403)
