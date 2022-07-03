@@ -14,10 +14,25 @@ app.use('/img', express.static(__dirname + 'public/img'))
 
 // ROUTES
 const rootRoutes = require('./routes/rootRoutes')
+const impressumRoutes = require('./routes/impressumRoutes')
+const aboutRoutes = require('./routes/aboutRoutes')
+const versandinfoRoutes = require('./routes/versandinfoRoutes')
+const faqRoutes = require('./routes/faqRoutes')
+const helpRoutes = require('./routes/helpRoutes')
+
+
+
+
 // USING MIDDLEWARE
 
 // USING ROUTES
 app.use('/', rootRoutes)
+app.use('/impressum', impressumRoutes)
+app.use('/about', aboutRoutes)
+app.use('/versandinfo', versandinfoRoutes)
+app.use('/faq', faqRoutes)
+app.use('/help', helpRoutes)
+
 
 // starting server
 app.listen(port, () => {
