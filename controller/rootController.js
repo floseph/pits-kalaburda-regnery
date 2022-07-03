@@ -1,5 +1,5 @@
 const rootGet = (req, res) => {
-  res.render('index', {root: 'views/html'})
+  res.sendFile('index.html', {root: 'views'})
 }
 
 module.exports = {rootGet}
