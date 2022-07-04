@@ -27,7 +27,7 @@
 
     <h2>Kontaktdaten</h2>    
     <p> <b>T:</b>+49 778-239-0270 <br>   
-        <b>E:</b><a href="mailto:batteriebrueder@mail.de">batteriebrueder@mail.com</a> 
+        <b>E:</b><a id="email">batteriebrueder@mail.com</a> 
     </p>
 
     <h2>Rechtliche Hinweise</h2>
@@ -39,6 +39,13 @@
     <li>Marko "Brüder" Kalaburda</li>
         
 
+    <script>
+        if(document.getElementById('email')){
+            window.addEventListener('load', () =>{
+                document.getElementById('email').href = window.atob('bWFpbHRvOmJhdHRlcmllYnJ1ZWRlckBtYWlsLmRl')
+            })
+        }
+    </script>
     
 </body>
 </html>

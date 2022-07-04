@@ -22,7 +22,7 @@
     <div class="flo-box">
         <h2>Florian "Batterie" Regnery</h2>
         <p>Co-Funder aller Batterien weltweit.</p>
-        <p><a href="mailto:batteriebruderflo@mail.de">batteriebruderflo@mail.de</a></p>
+        <p><a id="flo-email">batteriebruderflo@mail.de</a></p>
         <img src="/img/BB1.JPG" alt="batterie nummer 1" class="flo">
         
     </div>
@@ -30,7 +30,7 @@
     <div>
         <h2>Marko "Brüder" Kalaburda</h2>
         <p>Die Initialien stehen für maximales Kauderwelsch.</p>
-        <p><a href="mailto:batteriebrudermarko@mail.de">batteriebrudermarko@mail.de</a></p>
+        <p><a id="marko-email">batteriebrudermarko@mail.de</a></p>
         <img src="/img/BB2.JPG" alt="batterie nummer 2" class="mtok">
         
     </div>
@@ -38,7 +38,21 @@
     </div>
 
 
+    <script>
+        if(document.getElementById('flo-email')){
+            window.addEventListener('load', () =>{
+                document.getElementById('flo-email').href = window.atob('bWFpbHRvOmJhdHRlcmllYnJ1ZGVyZmxvQG1haWwuZGU=')
+            })
+        }
+    </script>
 
+    <script>
+        if(document.getElementById('marko-email')){
+            window.addEventListener('load', () =>{
+                document.getElementById('marko-email').href = window.atob('bWFpbHRvOmJhdHRlcmllYnJ1ZGVybWFya29AbWFpbC5kZQ==')
+            })
+        }
+    </script>
 
 
 

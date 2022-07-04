@@ -35,7 +35,7 @@ const honeypotRoutes = require('./routes/honeypotRoutes')
 
 // USING MIDDLEWARE
 app.use(rateLimit.dailyLimiter)
-app.use('/register', rateLimit.registerLimiter)
+// app.use('/register', rateLimit.registerLimiter)
 
 app.use(checkMaliciousUserAgent)
 

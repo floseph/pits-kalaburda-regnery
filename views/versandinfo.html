@@ -27,7 +27,14 @@
     <br>
     <h3>Versand ausserhalb Deutschlands noch nicht gewährleistet</h3>
     <p>Schreiben Sie doch einfach unserem Versandsupport bei weiteren Fragen:</p>
-    <p><a href="mailto:batteribruederVersand@mail.de">batteribruederVersand@mail.de</a></p>
+    <p><a id="email">batteriebruederVersand@mail.de</a></p>
 
+    <script>
+        if(document.getElementById('email')){
+            window.addEventListener('load', () =>{
+                document.getElementById('email').href = window.atob('bWFpbHRvOmJhdHRlcmllYnJ1ZWRlclZlcnNhbmRAbWFpbC5kZQ==')
+            })
+        }
+    </script>
 </body>
 </html>
