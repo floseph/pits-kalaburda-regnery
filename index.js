@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000;
 
+
+
+
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended : false}))
 
@@ -10,9 +13,11 @@ app.use(express.static('public'))
 app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/img', express.static(__dirname + 'public/img'))
 
+
+const checkForBannedIps = require('./middleware/checkForBannedIp')
+app.use(checkForBannedIps)
 // MIDDLEWARE
 const rateLimit = require('./middleware/rateLimit')
-const checkForBannedIps = require('./middleware/checkForBannedIp')
 const checkMaliciousUserAgent = require('./middleware/checkMaliciousUserAgent')
 
 // ROUTES
@@ -31,7 +36,7 @@ const honeypotRoutes = require('./routes/honeypotRoutes')
 // USING MIDDLEWARE
 app.use(rateLimit.dailyLimiter)
 app.use('/register', rateLimit.registerLimiter)
-app.use(checkForBannedIps)
+
 app.use(checkMaliciousUserAgent)
 
 // USING ROUTES
