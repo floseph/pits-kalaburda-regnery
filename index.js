@@ -14,11 +14,12 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/img', express.static(__dirname + 'public/img'))
 
 
-const checkForBannedIps = require('./middleware/checkForBannedIp')
-app.use(checkForBannedIps)
+
 // MIDDLEWARE
 const rateLimit = require('./middleware/rateLimit')
 const checkMaliciousUserAgent = require('./middleware/checkMaliciousUserAgent')
+const checkForBannedIps = require('./middleware/checkForBannedIp')
+
 
 // ROUTES
 const rootRoutes = require('./routes/rootRoutes')
@@ -32,12 +33,12 @@ const honeypotRoutes = require('./routes/honeypotRoutes')
 
 
 
-
 // USING MIDDLEWARE
 app.use(rateLimit.dailyLimiter)
 app.use('/register', rateLimit.registerLimiter)
-
 app.use(checkMaliciousUserAgent)
+app.use(checkForBannedIps)
+
 
 // USING ROUTES
 app.use('/', rootRoutes)
@@ -47,7 +48,7 @@ app.use('/about', aboutRoutes)
 app.use('/versandinfo', versandinfoRoutes)
 app.use('/faq', faqRoutes)
 app.use('/help', helpRoutes)
-// app.use('/superAwesomeSubpage', honeypotRoutes)
+app.use('/superAwesomeSubpage', honeypotRoutes)
 
 
 // starting server
