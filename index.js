@@ -35,7 +35,7 @@ const honeypotRoutes = require('./routes/honeypotRoutes')
 
 // USING MIDDLEWARE
 app.use(rateLimit.dailyLimiter)
-// app.use('/register', rateLimit.registerLimiter)
+app.use('/register', rateLimit.registerLimiter)
 
 app.use(checkMaliciousUserAgent)
 
@@ -47,7 +47,7 @@ app.use('/about', aboutRoutes)
 app.use('/versandinfo', versandinfoRoutes)
 app.use('/faq', faqRoutes)
 app.use('/help', helpRoutes)
-app.use('/superAwesomeSubpage', honeypotRoutes)
+// app.use('/superAwesomeSubpage', honeypotRoutes)
 
 
 // starting server

@@ -14,12 +14,14 @@ const db = new sqlite3.Database('./data.db', sqlite3.OPEN_READWRITE, (err) => {
 //   'DROP TABLE users'
 // );
 
-// db.run(
-//   'CREATE TABLE bannedips(ip_id INTEGER PRIMARY KEY, ip)'
-// )
+
 
 // db.run(
 //   'DROP TABLE bannedips'
+// )
+
+// db.run(
+//   'CREATE TABLE bannedips(ip_id INTEGER PRIMARY KEY, ip)'
 // )
 
 function addIp(ip){

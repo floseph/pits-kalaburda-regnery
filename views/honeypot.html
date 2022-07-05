@@ -13,8 +13,16 @@
   <h1>Batterie Brüder</h1>
 
   <h1>Unser System denkt Sie sind ein Bot!</h1>
-  <p>Hilfe ich bin kein Bot: <a href="mailto:batteriebruedersupport@mail.de">batteriebruedersupport@mail.de</a></p>
+  <p>Hilfe ich bin kein Bot: <a id="email">batteriebruedersupport@mail.de</a></p>
 
+
+  <script>
+    if(document.getElementById('email')){
+        window.addEventListener('load', () =>{
+            document.getElementById('email').href = window.atob('bWFpbHRvOmJhdHRlcmllYnJ1ZWRlcnN1cHBvcnRAbWFpbC5kZQ==')
+        })
+    }
+</script>
 </body>
 </html>
 
